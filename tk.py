@@ -1,6 +1,8 @@
 from tkinter import *
 import tkinter as tk
 from tkinter import ttk
+from tkinter import PhotoImage
+from PIL import Image, ImageTk
 
 
 LARGEFONT =("Verdana", 35)
@@ -89,10 +91,44 @@ class Page1(tk.Frame):
 		label = ttk.Label(self, text ="Menu", font = LARGEFONT)
 		label.grid(row = 0, column = 1, columnspan=4 , padx = 10, pady = 10)
 
-		
+		def load_and_resize_image(image_path, width, height):
+				original_image = Image.open(image_path)
+				resized_image = original_image.resize((width, height), Image.ANTIALIAS)
+				return ImageTk.PhotoImage(resized_image)
+
+			# First product card
+		product_image1 = load_and_resize_image("C:\\Users\\Yahya Qeyam\\Desktop\\shopp.png", 20, 20)  # Update with actual path
+		image_label1 = ttk.Label(self, image=product_image1)
+		image_label1.grid(row=2, column=1, padx=10, pady=10)
+
+		description_label1 = ttk.Label(self, text="Product 1 Description")
+		description_label1.grid(row=2, column=2, padx=10, pady=10)
+
+		price_label1 = ttk.Label(self, text="$19.99")  # Update with actual price
+		price_label1.grid(row=2, column=3, padx=10, pady=10)
+
+		purchase_button1 = ttk.Button(self, text="Purchase", command=lambda: print("Button 1 clicked"))
+		purchase_button1.grid(row=2, column=4, padx=10, pady=10)
+
+			# Second product card
+		product_image2 = load_and_resize_image("C:\\Users\\Yahya Qeyam\\Desktop\\shopp.png", 20, 20)  # Update with actual path
+		image_label2 = ttk.Label(self, image=product_image2)
+		image_label2.grid(row=3, column=1, padx=10, pady=10)
+
+		description_label2 = ttk.Label(self, text="Product 2 Description")
+		description_label2.grid(row=3, column=2, padx=10, pady=10)
+
+		price_label2 = ttk.Label(self, text="$29.99")  # Update with actual price
+		price_label2.grid(row=3, column=3, padx=10, pady=10)
+
+		purchase_button2 = ttk.Button(self, text="Purchase", command=lambda: print("Button 2 clicked"))
+		purchase_button2.grid(row=3, column=4, padx=10, pady=10)
+
+
+			
 		button1 = ttk.Button(self, text ="Home",
-							command = lambda : controller.show_frame(Home))
-	
+								command = lambda : controller.show_frame(Home))
+		
 		
 		button1.grid(row = 1, column = 1, padx = 130, pady = 50)
 
@@ -226,3 +262,21 @@ class Page4(tk.Frame):
 
 app = tkinterApp()
 app.mainloop()
+
+
+
+
+# import tkinter as tk
+# from PIL import Image, ImageTk
+
+# window = tk.Tk()
+
+# image = Image.open(r"C:\\Users\\Yahya Qeyam\\Desktop\\shopp.png")
+# image = image.resize((100, 100), Image.ANTIALIAS)
+
+# tk_image = ImageTk.PhotoImage(image)
+
+# image_label = tk.Label(window, image=tk_image)
+# image_label.pack()
+
+# window.mainloop()
