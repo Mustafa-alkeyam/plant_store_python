@@ -96,11 +96,17 @@ class Page1(tk.Frame):
 				resized_image = original_image.resize((width, height), Image.ANTIALIAS)
 				return ImageTk.PhotoImage(resized_image)
 
-			# First product card
-		product_image1 = load_and_resize_image("C:\\Users\\Yahya Qeyam\\Desktop\\shopp.png", 20, 20)  # Update with actual path
-		image_label1 = ttk.Label(self, image=product_image1)
-		image_label1.grid(row=2, column=1, padx=10, pady=10)
+		# product_image1 = PhotoImage(file="C:\\Users\\Yahya Qeyam\\Desktop\\shopp.png")  # Update with actual path
+		# image_label1 = ttk.Label(self, image=product_image1)
+		# image_label1.grid(row=2, column=1, padx=10, pady=10)
+		image = Image.open(r"C:\\Users\\Yahya Qeyam\\Desktop\\shopp.png")
+		image = image.resize((100, 100), Image.ANTIALIAS)
 
+		tk_image = ImageTk.PhotoImage(image)
+
+		image_label = tk.Label(self, image=tk_image)
+		# image_label.pack()
+        image_label.grid(row=2, column=1, padx=10, pady=10)
 		description_label1 = ttk.Label(self, text="Product 1 Description")
 		description_label1.grid(row=2, column=2, padx=10, pady=10)
 
@@ -111,7 +117,7 @@ class Page1(tk.Frame):
 		purchase_button1.grid(row=2, column=4, padx=10, pady=10)
 
 			# Second product card
-		product_image2 = load_and_resize_image("C:\\Users\\Yahya Qeyam\\Desktop\\shopp.png", 20, 20)  # Update with actual path
+		product_image2 = PhotoImage(file="C:\\Users\\Yahya Qeyam\\Desktop\\shopp.png")  # Update with actual path
 		image_label2 = ttk.Label(self, image=product_image2)
 		image_label2.grid(row=3, column=1, padx=10, pady=10)
 
