@@ -8,6 +8,11 @@ from PIL import Image, ImageTk
 LARGEFONT =("Verdana", 35)
 
 class tkinterApp(tk.Tk):
+
+
+	
+
+		
 	
 	 
 	def __init__(self, *args, **kwargs): 
@@ -106,8 +111,9 @@ class Page1(tk.Frame):
 		price_label1 = ttk.Label(self, text="$19.99")  # Update with actual price
 		price_label1.grid(row=4, column=1, padx=10, pady=10)
 
-		purchase_button1 = ttk.Button(self, text="Purchase", command=lambda: print("Button 1 clicked"))
+		purchase_button1 = ttk.Button(self, text="Add To Cart", command=lambda: self.add_to_cart(controller))
 		purchase_button1.grid(row=5, column=1, padx=10, pady=10)
+		
 
 			# Second product card
 		product_image2 = PhotoImage(file="C:\\Users\\Yahya Qeyam\\Desktop\\shopp.png")  # Update with actual path
@@ -120,7 +126,7 @@ class Page1(tk.Frame):
 		price_label2 = ttk.Label(self, text="$29.99")  # Update with actual price
 		price_label2.grid(row=4, column=2, padx=10, pady=10)
 
-		purchase_button2 = ttk.Button(self, text="Purchase", command=lambda: print("Button 2 clicked"))
+		purchase_button2 = ttk.Button(self, text="Add To Cart", command=lambda: print("Button 2 clicked"))
 		purchase_button2.grid(row=5, column=2, padx=10, pady=10)
 
 
@@ -134,50 +140,79 @@ class Page1(tk.Frame):
 		price_label2 = ttk.Label(self, text="$29.99")  # Update with actual price
 		price_label2.grid(row=4, column=3, padx=10, pady=10)
 
-		purchase_button2 = ttk.Button(self, text="Purchase", command=lambda: print("Button 2 clicked"))
+		purchase_button2 = ttk.Button(self, text="Add To Cart", command=lambda: print("Button 2 clicked"))
 		purchase_button2.grid(row=5, column=3, padx=10, pady=10)
 
 
 		product_image2 = PhotoImage(file="C:\\Users\\Yahya Qeyam\\Desktop\\shopp.png")  # Update with actual path
 		image_label2 = ttk.Label(self, image=product_image2)
-		image_label2.grid(row=3, column=1, padx=10, pady=10)
+		image_label2.grid(row=2, column=4, padx=10, pady=10)
 
 		description_label2 = ttk.Label(self, text="Product 2 Description")
-		description_label2.grid(row=4, column=1, padx=10, pady=10)
+		description_label2.grid(row=3, column=4, padx=10, pady=10)
 
 		price_label2 = ttk.Label(self, text="$29.99")  # Update with actual price
-		price_label2.grid(row=5, column=1, padx=10, pady=10)
+		price_label2.grid(row=4, column=4, padx=10, pady=10)
 
-		purchase_button2 = ttk.Button(self, text="Purchase", command=lambda: print("Button 2 clicked"))
-		purchase_button2.grid(row=6, column=1, padx=10, pady=10)
+		purchase_button2 = ttk.Button(self, text="Add To Cart", command=lambda: print("Button 2 clicked"))
+		purchase_button2.grid(row=5, column=4, padx=10, pady=10)
 
 
 		product_image2 = PhotoImage(file="C:\\Users\\Yahya Qeyam\\Desktop\\shopp.png")  # Update with actual path
 		image_label2 = ttk.Label(self, image=product_image2)
-		image_label2.grid(row=3, column=2, padx=10, pady=10)
+		image_label2.grid(row=6, column=1, padx=10, pady=10)
 
 		description_label2 = ttk.Label(self, text="Product 2 Description")
-		description_label2.grid(row=4, column=2, padx=10, pady=10)
+		description_label2.grid(row=7, column=1, padx=10, pady=10)
 
 		price_label2 = ttk.Label(self, text="$29.99")  # Update with actual price
-		price_label2.grid(row=5, column=2, padx=10, pady=10)
+		price_label2.grid(row=8, column=1, padx=10, pady=10)
 
-		purchase_button2 = ttk.Button(self, text="Purchase", command=lambda: print("Button 2 clicked"))
-		purchase_button2.grid(row=6, column=2, padx=10, pady=10)
+		purchase_button2 = ttk.Button(self, text="Add To Cart", command=lambda: print("Button 2 clicked"))
+		purchase_button2.grid(row=9, column=1, padx=10, pady=10)
 
 
 		product_image2 = PhotoImage(file="C:\\Users\\Yahya Qeyam\\Desktop\\shopp.png")  # Update with actual path
 		image_label2 = ttk.Label(self, image=product_image2)
-		image_label2.grid(row=3, column=3, padx=10, pady=10)
+		image_label2.grid(row=6, column=2, padx=10, pady=10)
 
 		description_label2 = ttk.Label(self, text="Product 2 Description")
-		description_label2.grid(row=4, column=3, padx=10, pady=10)
+		description_label2.grid(row=7, column=2, padx=10, pady=10)
 
 		price_label2 = ttk.Label(self, text="$29.99")  # Update with actual price
-		price_label2.grid(row=5, column=3, padx=10, pady=10)
+		price_label2.grid(row=8, column=2, padx=10, pady=10)
 
-		purchase_button2 = ttk.Button(self, text="Purchase", command=lambda: print("Button 2 clicked"))
-		purchase_button2.grid(row=6, column=3, padx=10, pady=10)
+		purchase_button2 = ttk.Button(self, text="Add To Cart", command=lambda: print("Button 2 clicked"))
+		purchase_button2.grid(row=9, column=2, padx=10, pady=10)
+
+
+		product_image2 = PhotoImage(file="C:\\Users\\Yahya Qeyam\\Desktop\\shopp.png")  # Update with actual path
+		image_label2 = ttk.Label(self, image=product_image2)
+		image_label2.grid(row=6, column=3, padx=10, pady=10)
+
+		description_label2 = ttk.Label(self, text="Product 2 Description")
+		description_label2.grid(row=7, column=3, padx=10, pady=10)
+
+		price_label2 = ttk.Label(self, text="$29.99")  # Update with actual price
+		price_label2.grid(row=8, column=3, padx=10, pady=10)
+
+		purchase_button2 = ttk.Button(self, text="Add To Cart", command=lambda: print("Button 2 clicked"))
+		purchase_button2.grid(row=9, column=3, padx=10, pady=10)
+
+
+		product_image2 = PhotoImage(file="C:\\Users\\Yahya Qeyam\\Desktop\\shopp.png")  # Update with actual path
+		image_label2 = ttk.Label(self, image=product_image2)
+		image_label2.grid(row=6, column=4, padx=10, pady=10)
+
+		description_label2 = ttk.Label(self, text="Product 2 Description")
+		description_label2.grid(row=7, column=4, padx=10, pady=10)
+
+		price_label2 = ttk.Label(self, text="$29.99")  # Update with actual price
+		price_label2.grid(row=8, column=4, padx=10, pady=10)
+
+		purchase_button2 = ttk.Button(self, text="Add To Cart", command=lambda: print("Button 2 clicked"))
+		purchase_button2.grid(row=9, column=4, padx=10, pady=10)
+
 
 
 			
