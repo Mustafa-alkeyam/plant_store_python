@@ -124,6 +124,62 @@ class Page1(tk.Frame):
 		purchase_button2.grid(row=5, column=2, padx=10, pady=10)
 
 
+		product_image2 = PhotoImage(file="C:\\Users\\Yahya Qeyam\\Desktop\\shopp.png")  # Update with actual path
+		image_label2 = ttk.Label(self, image=product_image2)
+		image_label2.grid(row=2, column=3, padx=10, pady=10)
+
+		description_label2 = ttk.Label(self, text="Product 2 Description")
+		description_label2.grid(row=3, column=3, padx=10, pady=10)
+
+		price_label2 = ttk.Label(self, text="$29.99")  # Update with actual price
+		price_label2.grid(row=4, column=3, padx=10, pady=10)
+
+		purchase_button2 = ttk.Button(self, text="Purchase", command=lambda: print("Button 2 clicked"))
+		purchase_button2.grid(row=5, column=3, padx=10, pady=10)
+
+
+		product_image2 = PhotoImage(file="C:\\Users\\Yahya Qeyam\\Desktop\\shopp.png")  # Update with actual path
+		image_label2 = ttk.Label(self, image=product_image2)
+		image_label2.grid(row=3, column=1, padx=10, pady=10)
+
+		description_label2 = ttk.Label(self, text="Product 2 Description")
+		description_label2.grid(row=4, column=1, padx=10, pady=10)
+
+		price_label2 = ttk.Label(self, text="$29.99")  # Update with actual price
+		price_label2.grid(row=5, column=1, padx=10, pady=10)
+
+		purchase_button2 = ttk.Button(self, text="Purchase", command=lambda: print("Button 2 clicked"))
+		purchase_button2.grid(row=6, column=1, padx=10, pady=10)
+
+
+		product_image2 = PhotoImage(file="C:\\Users\\Yahya Qeyam\\Desktop\\shopp.png")  # Update with actual path
+		image_label2 = ttk.Label(self, image=product_image2)
+		image_label2.grid(row=3, column=2, padx=10, pady=10)
+
+		description_label2 = ttk.Label(self, text="Product 2 Description")
+		description_label2.grid(row=4, column=2, padx=10, pady=10)
+
+		price_label2 = ttk.Label(self, text="$29.99")  # Update with actual price
+		price_label2.grid(row=5, column=2, padx=10, pady=10)
+
+		purchase_button2 = ttk.Button(self, text="Purchase", command=lambda: print("Button 2 clicked"))
+		purchase_button2.grid(row=6, column=2, padx=10, pady=10)
+
+
+		product_image2 = PhotoImage(file="C:\\Users\\Yahya Qeyam\\Desktop\\shopp.png")  # Update with actual path
+		image_label2 = ttk.Label(self, image=product_image2)
+		image_label2.grid(row=3, column=3, padx=10, pady=10)
+
+		description_label2 = ttk.Label(self, text="Product 2 Description")
+		description_label2.grid(row=4, column=3, padx=10, pady=10)
+
+		price_label2 = ttk.Label(self, text="$29.99")  # Update with actual price
+		price_label2.grid(row=5, column=3, padx=10, pady=10)
+
+		purchase_button2 = ttk.Button(self, text="Purchase", command=lambda: print("Button 2 clicked"))
+		purchase_button2.grid(row=6, column=3, padx=10, pady=10)
+
+
 			
 		button1 = ttk.Button(self, text ="Home",
 								command = lambda : controller.show_frame(Home))
