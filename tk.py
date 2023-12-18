@@ -96,41 +96,32 @@ class Page1(tk.Frame):
 				resized_image = original_image.resize((width, height), Image.ANTIALIAS)
 				return ImageTk.PhotoImage(resized_image)
 
-		# product_image1 = PhotoImage(file="C:\\Users\\Yahya Qeyam\\Desktop\\shopp.png")  # Update with actual path
-		# image_label1 = ttk.Label(self, image=product_image1)
-		# image_label1.grid(row=2, column=1, padx=10, pady=10)
-		image = Image.open(r"C:\\Users\\Yahya Qeyam\\Desktop\\shopp.png")
-		# image = image.resize((100, 100), Image.ANTIALIAS)
-
-		tk_image = ImageTk.PhotoImage(image)
-
-		image_label1 = tk.Label(self, image=tk_image)
-        # image_label1.grid(row=2, column=1, padx=10, pady=10)
-		image_label1.grid(row=5, column=6)
-		print(image_label1)
+		product_image1 = PhotoImage(file="C:\\Users\\Yahya Qeyam\\Desktop\\shopp.png")  # Update with actual path
+		image_label1 = ttk.Label(self, image=product_image1)
+		image_label1.grid(row=2, column=1, padx=10, pady=10)
 	
 		description_label1 = ttk.Label(self, text="Product 1 Description")
-		description_label1.grid(row=2, column=2, padx=10, pady=10)
+		description_label1.grid(row=3, column=1, padx=10, pady=10)
 
 		price_label1 = ttk.Label(self, text="$19.99")  # Update with actual price
-		price_label1.grid(row=2, column=3, padx=10, pady=10)
+		price_label1.grid(row=4, column=1, padx=10, pady=10)
 
 		purchase_button1 = ttk.Button(self, text="Purchase", command=lambda: print("Button 1 clicked"))
-		purchase_button1.grid(row=2, column=4, padx=10, pady=10)
+		purchase_button1.grid(row=5, column=1, padx=10, pady=10)
 
 			# Second product card
 		product_image2 = PhotoImage(file="C:\\Users\\Yahya Qeyam\\Desktop\\shopp.png")  # Update with actual path
 		image_label2 = ttk.Label(self, image=product_image2)
-		image_label2.grid(row=3, column=1, padx=10, pady=10)
+		image_label2.grid(row=2, column=2, padx=10, pady=10)
 
 		description_label2 = ttk.Label(self, text="Product 2 Description")
 		description_label2.grid(row=3, column=2, padx=10, pady=10)
 
 		price_label2 = ttk.Label(self, text="$29.99")  # Update with actual price
-		price_label2.grid(row=3, column=3, padx=10, pady=10)
+		price_label2.grid(row=4, column=2, padx=10, pady=10)
 
 		purchase_button2 = ttk.Button(self, text="Purchase", command=lambda: print("Button 2 clicked"))
-		purchase_button2.grid(row=3, column=4, padx=10, pady=10)
+		purchase_button2.grid(row=5, column=2, padx=10, pady=10)
 
 
 			
@@ -237,6 +228,7 @@ class Page4(tk.Frame):
 		label = ttk.Label(self, text ="Contact ", font = LARGEFONT)
 		label.grid(row = 0, column = 1, columnspan=4 , padx = 10, pady = 10)
 
+
 		
 		button1 = ttk.Button(self, text ="Menu ",
 							command = lambda : controller.show_frame(Page1))
@@ -262,6 +254,32 @@ class Page4(tk.Frame):
 	
 		
 		button4.grid(row = 1, column = 4, padx = 130, pady = 50)
+
+
+
+			# Form for Name
+		name_label = ttk.Label(self, text="Name:")
+		name_label.grid(row=2, column=0, columnspan=4 , padx=10, pady=50)
+		name_entry = ttk.Entry(self)
+		name_entry.grid(row=2, column=1, columnspan=4, padx=10, pady=10)
+
+			# Form for Phone Number
+		phone_label = ttk.Label(self, text="Phone Number:")
+		phone_label.grid(row=3,  column=0, columnspan=4 , padx=10, pady=50)
+		phone_entry = ttk.Entry(self)
+		phone_entry.grid(row=3,  column=1, columnspan=4 , padx=10, pady=10)
+
+			# Form for Email
+		email_label = ttk.Label(self, text="Email:")
+		email_label.grid(row=4,  column=0, columnspan=4 , padx=10, pady=50)
+		email_entry = ttk.Entry(self)
+		email_entry.grid(row=4,  column=1, columnspan=4 , padx=10, pady=10)
+
+			# Form for Address
+		address_label = ttk.Label(self, text="Address:")
+		address_label.grid(row=5,  column=0, columnspan=4 , padx=10, pady=50)
+		address_entry = ttk.Entry(self)
+		address_entry.grid(row=5,  column=1, columnspan=4 , padx=10, pady=10)
 
 		
 		
