@@ -100,14 +100,15 @@ class Page1(tk.Frame):
 				original_image = Image.open(image_path)
 				resized_image = original_image.resize((width, height), Image.ANTIALIAS)
 				return ImageTk.PhotoImage(resized_image)
-		image_path = r"C:\\Users\\Yahya Qeyam\\Desktop\\AloeVera.jpg"
-		Jade_path = r"C:\\Users\\Yahya Qeyam\\Desktop\\Jade plant.jpg"
-		Golden_path = r"C:\\Users\\Yahya Qeyam\\Desktop\\Golden pothos.jpg"
-		Sansiniera_path = r"C:\\Users\\Yahya Qeyam\\Desktop\\Sansiniera.jpg"
-		Orange_path = r"C:\\Users\\Yahya Qeyam\\Desktop\\Orange tree.jpg"
-		Lemon_path = r"C:\\Users\\Yahya Qeyam\\Desktop\\Lemon tree.jpg"
-		Apple_path = r"C:\\Users\\Yahya Qeyam\\Desktop\\Apple tree.jpg"
-		Fig_path = r"C:\\Users\\Yahya Qeyam\\Desktop\\Fig tree.jpg"
+		image_path = r"C:\\Users\\Yahya Qeyam\\Desktop\\img\\AloeVera.jpg"
+		Jade_path = r"C:\\Users\\Yahya Qeyam\\Desktop\\img\\Jade plant.jpg"
+		Golden_path = r"C:\\Users\\Yahya Qeyam\\Desktop\\img\\Golden pothos.jpg"
+		Sansiniera_path = r"C:\\Users\\Yahya Qeyam\\Desktop\\img\\Sansiniera.jpg"
+		Orange_path = r"C:\\Users\\Yahya Qeyam\\Desktop\\img\\Orange tree.jpg"
+		Lemon_path = r"C:\\Users\\Yahya Qeyam\\Desktop\\img\\Lemon tree.jpg"
+		Apple_path = r"C:\\Users\\Yahya Qeyam\\Desktop\\img\\Apple tree.jpg"
+		Fig_path = r"C:\\Users\\Yahya Qeyam\\Desktop\\img\\Fig tree.jpg"
+		
 		
 
 		product_image1 = load_and_resize_image(image_path, width=100, height=100)
@@ -333,6 +334,23 @@ class Page3(tk.Frame):
 	
 		
 		button4.grid(row = 1, column = 4, padx = 130, pady = 50)
+
+
+			# Description text below the image
+		description_label = ttk.Label(self, text="Plant Store")
+		description_label.grid(row=2, column=2, columnspan=2, padx=10, pady=10)
+
+
+		description_label = ttk.Label(self, text="Your online store for houseplants and more!")
+		description_label.grid(row=3, column=2, columnspan=2, padx=10, pady=10)
+
+		description_label = ttk.Label(self, text="PLANTstore is your one-stop-shop for all plant-related products,")
+		description_label.grid(row=4, column=2, columnspan=2, padx=10, pady=10)
+
+		description_label = ttk.Label(self, text="and we also offer delivery")
+		description_label.grid(row=5, column=2, columnspan=2, padx=10, pady=10)
+
+
 		
 
 
